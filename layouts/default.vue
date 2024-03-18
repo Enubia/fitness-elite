@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useMediaQuery } from '@vueuse/core';
-import { HamburgerMenuIcon } from '@radix-icons/vue';
 import { VisuallyHidden } from 'radix-vue';
 import {
     NavigationMenu,
@@ -51,7 +50,7 @@ const isMobile = useMediaQuery('(max-width: 834px)');
 
         <Sheet v-else>
             <SheetTrigger class="pe-3 md:pe-0">
-                <HamburgerMenuIcon class="w-10 h-10" />
+                <Icon name="radix-icons:hamburger-menu" class="w-10 h-10" />
             </SheetTrigger>
             <SheetContent>
                 <SheetHeader>
