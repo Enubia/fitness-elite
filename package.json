@@ -32,6 +32,7 @@
         "eslint": "^8.57.0",
         "h3": "^1.11.1",
         "nitro-cloudflare-dev": "^0.1.1",
+        "nuxt-icon": "^0.6.9",
         "shadcn-nuxt": "^0.10.2",
         "typescript": "^5.4.2",
         "wrangler": "^3.34.2"
