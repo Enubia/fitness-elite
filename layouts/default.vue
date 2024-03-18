@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useMediaQuery } from '@vueuse/core';
-import { HamburgerMenuIcon, InstagramLogoIcon } from '@radix-icons/vue';
+import { HamburgerMenuIcon } from '@radix-icons/vue';
 import { VisuallyHidden } from 'radix-vue';
 import {
     NavigationMenu,
@@ -109,7 +109,7 @@ const isMobile = useMediaQuery('(max-width: 834px)');
             </div>
             <div class="flex mt-4 lg:mt-0 ">
                 <a href="https://www.instagram.com/fitness_elite.eu" target="_blank">
-                    <InstagramLogoIcon class="w-10 h-10" />
+                    <Icon name="uil:instagram" class="w-10 h-10" />
                 </a>
                 <a href="https://www.facebook.com/reel/472712058295541" target="_blank">
                     <Icon name="uil:facebook-f" class="w-10 h-10" />
