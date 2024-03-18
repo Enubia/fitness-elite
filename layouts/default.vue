@@ -3,8 +3,21 @@ import { useMediaQuery } from '@vueuse/core';
 import { HamburgerMenuIcon } from '@radix-icons/vue';
 import { VisuallyHidden } from 'radix-vue';
 import {
+    NavigationMenu,
+    NavigationMenuItem,
+    NavigationMenuLink,
+    NavigationMenuList,
     navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
+import {
+    Sheet,
+    SheetClose,
+    SheetContent,
+    SheetDescription,
+    SheetHeader,
+    SheetTitle,
+    SheetTrigger,
+} from '@/components/ui/sheet';
 
 const isDesktop = useMediaQuery('(min-width: 835px)');
 </script>
@@ -12,8 +25,11 @@ const isDesktop = useMediaQuery('(min-width: 835px)');
 <template>
     <header class="flex justify-between content-center md:px-3 py-5">
         <NuxtLink class="ps-5 md:ps-20" to="/">
-            <NuxtImg v-if="isDesktop" class="w-96" src="/svg/logo.svg" alt="Logo" />
-            <NuxtImg v-else class="h-20" src="/svg/logo-mobile.svg" alt="Logo" />
+            <NuxtImg
+                :class="isDesktop ? 'w-96' : 'h-20'"
+                :src="isDesktop ? '/svg/logo.svg' : '/svg/logo-mobile.svg'"
+                alt="Logo"
+            />
         </NuxtLink>
 
         <NavigationMenu v-if="isDesktop" class="pe-20">
