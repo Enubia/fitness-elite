@@ -3,11 +3,19 @@ export default defineNuxtConfig({
     devtools: { enabled: true },
 
     modules: [
-        '@nuxtjs/tailwindcss',
-        'shadcn-nuxt',
         '@nuxt/image',
+        '@nuxtjs/google-fonts',
+        '@nuxtjs/tailwindcss',
         'nuxt-icon',
+        'shadcn-nuxt',
     ],
+
+    googleFonts: {
+        families: {
+            Anton: true,
+            Montserrat: true,
+        },
+    },
 
     shadcn: {
         /**

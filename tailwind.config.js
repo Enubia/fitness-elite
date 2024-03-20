@@ -7,6 +7,11 @@ module.exports = {
     prefix: '',
 
     theme: {
+        fontFamily: {
+            heading: ['Anton', 'sans-serif'],
+            sans: ['Montserrat', 'sans-serif'],
+            serif: ['Montserrat', 'sans-serif'],
+        },
         container: {
             center: true,
             padding: '2rem',

@@ -22,8 +22,8 @@ const isMobile = useMediaQuery('(max-width: 834px)');
 </script>
 
 <template>
-    <header class="sticky top-0 flex content-center justify-between bg-black py-5 md:px-3 lg:relative lg:top-auto">
-        <NuxtLink class="ps-5 md:ps-20" to="/">
+    <header class="sticky top-0 flex content-center justify-between bg-background py-5 md:px-3 lg:relative lg:top-auto">
+        <NuxtLink class="ps-10 md:ps-20" to="/">
             <NuxtImg
                 :class="!isMobile ? 'w-96' : 'h-20'"
                 :src="!isMobile ? '/svg/logo.svg' : '/svg/logo-mobile.svg'"
@@ -49,7 +49,7 @@ const isMobile = useMediaQuery('(max-width: 834px)');
         </NavigationMenu>
 
         <Sheet v-else>
-            <SheetTrigger class="pe-3 md:pe-0">
+            <SheetTrigger class="pe-5 md:pe-10">
                 <Icon name="radix-icons:hamburger-menu" class="size-10" />
             </SheetTrigger>
             <SheetContent>
