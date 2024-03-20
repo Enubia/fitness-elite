@@ -23,6 +23,6 @@
 
 <style>
     #hero {
-        background: url('/img/zeus-try.png') no-repeat center center / cover;
+        background: url('/images/zeus-try.png') no-repeat center center / cover;
     }
 </style>

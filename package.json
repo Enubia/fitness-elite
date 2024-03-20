@@ -1,15 +1,13 @@
 {
-    "name": "nuxt-app",
+    "name": "fitness-elite",
     "type": "module",
     "private": true,
     "scripts": {
         "build": "nuxt build",
         "dev": "nuxt dev",
         "generate": "nuxt generate",
-        "preview": "pnpm run build && wrangler pages dev ./dist",
-        "postinstall": "nuxt prepare",
-        "deploy": "pnpm run build && wrangler pages deploy ./dist",
-        "build-cf-types": "wrangler types"
+        "preview": "pnpm run build",
+        "postinstall": "nuxt prepare"
     },
     "dependencies": {
         "@radix-icons/vue": "^1.0.0",
@@ -25,16 +23,12 @@
     },
     "devDependencies": {
         "@antfu/eslint-config": "^2.8.3",
-        "@cloudflare/workers-types": "^4.20240314.0",
         "@nuxt/image": "^1.4.0",
         "@nuxtjs/tailwindcss": "^6.11.4",
         "@vueuse/core": "^10.9.0",
         "eslint": "^8.57.0",
-        "h3": "^1.11.1",
-        "nitro-cloudflare-dev": "^0.1.1",
         "nuxt-icon": "^0.6.9",
         "shadcn-nuxt": "^0.10.2",
-        "typescript": "^5.4.2",
-        "wrangler": "^3.34.2"
+        "typescript": "^5.4.2"
     }
 }
