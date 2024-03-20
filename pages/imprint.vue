@@ -1,8 +1,8 @@
 <template>
     <div class="bg-white text-background">
-        <div class="container py-16 lg:flex justify-between">
+        <div class="container justify-between py-16 lg:flex">
             <div>
-                <h1 class="text-5xl font-bold mb-4 uppercase">
+                <h1 class="mb-4 text-5xl font-bold uppercase">
                     IMPRESSUM
                 </h1>
             </div>

@@ -16,7 +16,7 @@
                 </p>
                 <p class="mt-4">
                     <span>In dieser Datenschutzrichtlinie erfahren Sie:</span>
-                    <ul class="list-disc ml-8 mt-2">
+                    <ul class="ml-8 mt-2 list-disc">
                         <li class="mt-2">
                             Wie wir Daten sammeln
                         </li>
@@ -48,12 +48,12 @@
                 </p>
             </section>
             <section class="mt-10">
-                <h2 class="text-4xl mt-10">
+                <h2 class="mt-10 text-4xl">
                     Welche Daten erfassen wir?
                 </h2>
                 <p class="mt-4">
                     <span>Nachstehend erhalten Sie einen Überblick über die Daten, die wir erfassen können:</span>
-                    <ul class="list-disc ml-8 mt-2">
+                    <ul class="ml-8 mt-2 list-disc">
                         <li class="mt-2">
                             Nicht identifizierte und nicht identifizierbare Informationen, die Sie während des Registrierungsprozesses bereitstellen oder die über die Nutzung unserer Dienste gesammelt werden („nicht personenbezogene Daten“). Nicht personenbezogene Daten lassen keine Rückschlüsse darauf zu, von wem sie erfasst wurden. Nicht personenbezogene Daten, die wir erfassen, bestehen hauptsächlich aus technischen und zusammengefassten Nutzungsinformationen.
                         </li>
@@ -64,12 +64,12 @@
                 </p>
             </section>
             <section class="mt-10">
-                <h2 class="text-4xl mt-10">
+                <h2 class="mt-10 text-4xl">
                     Warum erfassen wir diese Daten?
                 </h2>
                 <p class="mt-4">
                     <span>Wir können Ihre Daten für folgende Zwecke verwenden:</span>
-                    <ul class="list-disc ml-8 mt-2">
+                    <ul class="ml-8 mt-2 list-disc">
                         <li class="mt-2">
                             um unsere Dienste zur Verfügung zu stellen und zu betreiben;
                         </li>
@@ -98,7 +98,7 @@
                 </p>
             </section>
             <section class="mt-10">
-                <h2 class="text-4xl mt-10">
+                <h2 class="mt-10 text-4xl">
                     An wen geben wir die Daten weiter?
                 </h2>
                 <p class="mt-4">
@@ -109,7 +109,7 @@
                 </p>
             </section>
             <section class="mt-10">
-                <h2 class="text-4xl mt-10">
+                <h2 class="mt-10 text-4xl">
                     Cookies und ähnliche Technologien
                 </h2>
                 <p class="mt-4">
@@ -126,7 +126,7 @@
                 </p>
             </section>
             <section class="mt-10">
-                <h2 class="text-4xl mt-10">
+                <h2 class="mt-10 text-4xl">
                     Wo speichern wir die Daten?
                 </h2>
                 <p class="mt-4">
@@ -140,7 +140,7 @@
                 </p>
             </section>
             <section class="mt-10">
-                <h2 class="text-4xl mt-10">
+                <h2 class="mt-10 text-4xl">
                     Wie lange werden die Daten vorgehalten?
                 </h2>
                 <p class="mt-4">
@@ -150,7 +150,7 @@
                 </p>
             </section>
             <section class="mt-10">
-                <h2 class="text-4xl mt-10">
+                <h2 class="mt-10 text-4xl">
                     Wie schützen wir die Daten?
                 </h2>
                 <p class="mt-4">
@@ -167,7 +167,7 @@
                 </p>
             </section>
             <section class="mt-10">
-                <h2 class="text-4xl mt-10">
+                <h2 class="mt-10 text-4xl">
                     Wie gehen wir mit Minderjährigen um?
                 </h2>
                 <p class="mt-4">
@@ -183,7 +183,7 @@
                     <span>
                         Wir verwenden Ihre personenbezogenen Daten nur für die in der Datenschutzrichtlinie festgelegten Zwecke und nur, wenn wir davon überzeugt sind, dass:
                     </span>
-                    <ul class="list-disc ml-8 mt-2">
+                    <ul class="ml-8 mt-2 list-disc">
                         <li class="mt-2">
                             die Verwendung Ihrer personenbezogenen Daten erforderlich ist, um einen Vertrag zu erfüllen oder zu schließen (z. B. um Ihnen die Dienste selbst oder Kundenbetreuung bzw. technischen Support bereitzustellen);
                         </li>
@@ -197,7 +197,7 @@
                 </p>
                 <p class="mt-4">
                     <span>Als EU-Ansässiger können Sie:</span>
-                    <ul class="list-disc ml-8 mt-2">
+                    <ul class="ml-8 mt-2 list-disc">
                         <li class="mt-2">
                             eine Bestätigung darüber verlangen, ob personenbezogene Daten verarbeitet werden, die Sie betreffen, oder nicht, und Zugriff auf Ihre gespeicherten personenbezogenen Daten sowie auf bestimmte Zusatzinformationen anfordern;
                         </li>
@@ -243,7 +243,7 @@
                 </p>
             </section>
             <section class="mt-10">
-                <h2 class="text-4xl mt-10">
+                <h2 class="mt-10 text-4xl">
                     Aktualisierungen oder Änderungen der Datenschutzrichtlinie
                 </h2>
                 <p class="mt-4">
@@ -251,7 +251,7 @@
                 </p>
             </section>
             <section class="mt-10">
-                <h2 class="text-4xl mt-10">
+                <h2 class="mt-10 text-4xl">
                     Kontakt
                 </h2>
                 <p class="mt-4">

@@ -22,7 +22,7 @@ const isMobile = useMediaQuery('(max-width: 834px)');
 </script>
 
 <template>
-    <header class="flex justify-between content-center md:px-3 py-5">
+    <header class="sticky top-0 flex content-center justify-between bg-black py-5 md:px-3 lg:relative lg:top-auto">
         <NuxtLink class="ps-5 md:ps-20" to="/">
             <NuxtImg
                 :class="!isMobile ? 'w-96' : 'h-20'"
@@ -50,7 +50,7 @@ const isMobile = useMediaQuery('(max-width: 834px)');
 
         <Sheet v-else>
             <SheetTrigger class="pe-3 md:pe-0">
-                <Icon name="radix-icons:hamburger-menu" class="w-10 h-10" />
+                <Icon name="radix-icons:hamburger-menu" class="size-10" />
             </SheetTrigger>
             <SheetContent>
                 <SheetHeader>
@@ -58,7 +58,7 @@ const isMobile = useMediaQuery('(max-width: 834px)');
                         <VisuallyHidden>Menu</VisuallyHidden>
                     </SheetTitle>
                 </SheetHeader>
-                <SheetDescription class="mt-5 grid gap-6 justify-center">
+                <SheetDescription class="mt-5 grid justify-center gap-6">
                     <NuxtLink to="/contact" class="text-center">
                         <SheetClose>
                             <Button variant="ghost" size="lg">
@@ -97,7 +97,7 @@ const isMobile = useMediaQuery('(max-width: 834px)');
     </main>
 
     <footer class="p-10 lg:p-20">
-        <div class="md:flex justify-between content-center">
+        <div class="content-center justify-between md:flex">
             <div>
                 <p class="my-2">
                     &copy; {{ new Date().getFullYear() }} THOMAS LINDNER, B.A
@@ -106,12 +106,12 @@ const isMobile = useMediaQuery('(max-width: 834px)');
                     FITNESSWISSENSCHAFTLER & ONLINE FITNESS COACH
                 </p>
             </div>
-            <div class="flex mt-4 lg:mt-0 ">
+            <div class="mt-4 flex lg:mt-0 ">
                 <a href="https://www.instagram.com/fitness_elite.eu" target="_blank">
-                    <Icon name="uil:instagram" class="w-10 h-10" />
+                    <Icon name="uil:instagram" class="size-10" />
                 </a>
                 <a href="https://www.facebook.com/reel/472712058295541" target="_blank">
-                    <Icon name="uil:facebook-f" class="w-10 h-10" />
+                    <Icon name="uil:facebook-f" class="size-10" />
                 </a>
             </div>
         </div>

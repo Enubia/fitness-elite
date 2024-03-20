@@ -3,9 +3,9 @@
 
 <template>
     <section id="hero" class="h-[85vh] md:h-[90vh] lg:h-[95vh]">
-        <div class="h-full flex justify-center">
-            <div class="grid gap-4 justify-center w-5/6 lg:w-1/4  absolute bottom-16">
-                <div class="text-center uppercase font-bold text-white">
+        <div class="flex h-full justify-center">
+            <div class="absolute bottom-16 grid w-5/6 justify-center  gap-4 lg:w-1/4">
+                <div class="text-center font-bold uppercase text-white">
                     <div class="text-3xl">
                         <span>Unleash your full potential</span>
                     </div>
