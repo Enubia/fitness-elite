@@ -1,3 +1,12 @@
+<script setup lang="ts">
+useSeoMeta({
+    title: 'Fitness Elite | Datenschutz',
+    description: 'Datenschutzrichtlinien von Fitness Elite',
+    robots: 'index, follow',
+    author: 'Thomas Lindner',
+});
+</script>
+
 <template>
     <div class="bg-foreground text-background">
         <div class="container py-16">

@@ -7,6 +7,8 @@ import FAQSection from '~/components/pages/index/FAQSection.vue';
 useSeoMeta({
     title: 'Fitness Elite | Your all in one coaching',
     description: 'Unleash your full potential with the all in one coaching "Elite Evolution"',
+    robots: 'index, follow',
+    author: 'Thomas Lindner',
 });
 </script>
 
@@ -18,11 +20,11 @@ useSeoMeta({
                     id="hero-title"
                     class="text-center font-heading text-3xl font-bold uppercase tracking-[0.02em] text-primary-foreground lg:text-5xl"
                 >
-                    <span>
+                    <h1>
                         Unleash your full potential
                         <br>
                         with the all in one coaching
-                    </span>
+                    </h1>
                     <br>
                     <span class="text-4xl italic text-primary">"Elite Evolution"</span>
                 </div>
