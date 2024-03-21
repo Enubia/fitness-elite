@@ -1,12 +1,12 @@
 <template>
-    <div class="bg-white text-background">
+    <div class="bg-foreground text-background">
         <div class="container justify-between py-16 lg:flex">
-            <div>
+            <div class="lg:w-1/3">
                 <h1 class="mb-4 text-5xl font-bold uppercase">
                     IMPRESSUM
                 </h1>
             </div>
-            <div>
+            <div class="lg:w-2/3">
                 <p class="mb-4">
                     <span>LINDNER Thomas</span>
                     <br>

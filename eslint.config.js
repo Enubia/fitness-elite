@@ -22,24 +22,22 @@ export default antfu(
             semi: true,
         },
 
-        ignores: [
-            '.vscode',
-            '.husky',
-            'dist',
-            'dist-electron',
-            'node_modules',
-        ],
-
         yaml: false,
     },
     ...compat.config({
-        root: true,
+        plugins: ['unused-imports'],
         extends: ['plugin:tailwindcss/recommended'],
-        overrides: [
-            {
-                files: ['*.vue'],
-                parser: 'vue-eslint-parser',
-            },
-        ],
+        rules: {
+            'unused-imports/no-unused-imports': 'error',
+            'unused-imports/no-unused-vars': [
+                'warn',
+                {
+                    vars: 'all',
+                    varsIgnorePattern: '^_',
+                    args: 'after-used',
+                    argsIgnorePattern: '^_',
+                },
+            ],
+        },
     }),
 );

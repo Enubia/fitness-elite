@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useMediaQuery } from '@vueuse/core';
 import { VisuallyHidden } from 'radix-vue';
 import {
     NavigationMenu,
@@ -17,79 +16,76 @@ import {
     SheetTitle,
     SheetTrigger,
 } from '@/components/ui/sheet';
-
-const isMobile = useMediaQuery('(max-width: 834px)');
 </script>
 
 <template>
-    <header class="sticky top-0 flex content-center justify-between bg-background py-5 md:px-3 lg:relative lg:top-auto">
-        <NuxtLink class="ps-10 md:ps-20" to="/">
-            <NuxtImg
-                :class="!isMobile ? 'w-96' : 'h-20'"
-                :src="!isMobile ? '/svg/logo.svg' : '/svg/logo-mobile.svg'"
-                alt="Logo"
-            />
+    <header class="sticky top-0 z-40 flex content-center justify-between bg-background py-5 md:px-3 lg:relative lg:top-auto">
+        <NuxtLink class="ps-5 md:ps-10 lg:ps-20" to="/">
+            <NuxtImg class="hidden lg:inline-flex" src="/svg/logo.svg" alt="Logo" />
+            <NuxtImg class="inline lg:hidden" src="/svg/logo-mobile.svg" alt="Logo" />
         </NuxtLink>
 
-        <NavigationMenu v-if="!isMobile" class="pe-20">
-            <NavigationMenuList>
-                <NavigationMenuItem>
-                    <NuxtLink to="/contact">
-                        <NavigationMenuLink :class="navigationMenuTriggerStyle()">
-                            Kontakt
-                        </NavigationMenuLink>
-                    </NuxtLink>
-                    <NuxtLink to="/privacy-policy">
-                        <NavigationMenuLink :class="navigationMenuTriggerStyle()">
-                            Datenschutz
-                        </NavigationMenuLink>
-                    </NuxtLink>
-                </NavigationMenuItem>
-            </NavigationMenuList>
-        </NavigationMenu>
-
-        <Sheet v-else>
-            <SheetTrigger class="pe-5 md:pe-10">
-                <Icon name="radix-icons:hamburger-menu" class="size-10" />
-            </SheetTrigger>
-            <SheetContent>
-                <SheetHeader>
-                    <SheetTitle>
-                        <VisuallyHidden>Menu</VisuallyHidden>
-                    </SheetTitle>
-                </SheetHeader>
-                <SheetDescription class="mt-5 grid justify-center gap-6">
-                    <NuxtLink to="/contact" class="text-center">
-                        <SheetClose>
-                            <Button variant="ghost" size="lg">
+        <div class="hidden pe-20 lg:inline-flex">
+            <NavigationMenu>
+                <NavigationMenuList>
+                    <NavigationMenuItem class="flex gap-5">
+                        <NuxtLink to="/contact">
+                            <NavigationMenuLink :class="navigationMenuTriggerStyle()">
                                 Kontakt
-                            </Button>
-                        </SheetClose>
-                    </NuxtLink>
-                    <NuxtLink to="/privacy-policy" class="text-center">
-                        <SheetClose>
-                            <Button variant="ghost" size="lg">
+                            </NavigationMenuLink>
+                        </NuxtLink>
+                        <NuxtLink to="/privacy-policy">
+                            <NavigationMenuLink :class="navigationMenuTriggerStyle()">
                                 Datenschutz
-                            </Button>
-                        </SheetClose>
-                    </NuxtLink>
-                    <NuxtLink to="/imprint" class="text-center">
-                        <SheetClose>
-                            <Button variant="ghost" size="lg">
+                            </NavigationMenuLink>
+                        </NuxtLink>
+                        <NuxtLink to="/imprint">
+                            <NavigationMenuLink :class="navigationMenuTriggerStyle()">
                                 Impressum
-                            </Button>
-                        </SheetClose>
-                    </NuxtLink>
-                    <NuxtLink to="/" class="text-center">
-                        <SheetClose>
-                            <Button variant="ghost" size="lg">
-                                Start
-                            </Button>
-                        </SheetClose>
-                    </NuxtLink>
-                </SheetDescription>
-            </SheetContent>
-        </Sheet>
+                            </NavigationMenuLink>
+                        </NuxtLink>
+                    </NavigationMenuItem>
+                </NavigationMenuList>
+            </NavigationMenu>
+        </div>
+
+        <div class="inline-flex pe-5 md:pe-10 lg:hidden">
+            <Sheet>
+                <SheetTrigger>
+                    <Icon name="radix-icons:hamburger-menu" class="size-10" />
+                </SheetTrigger>
+                <SheetContent>
+                    <SheetHeader>
+                        <SheetTitle>
+                            <VisuallyHidden>Menu</VisuallyHidden>
+                        </SheetTitle>
+                    </SheetHeader>
+                    <SheetDescription class="mt-5 grid justify-center gap-6">
+                        <NuxtLink to="/contact" class="text-center">
+                            <SheetClose>
+                                <Button variant="ghost" size="lg">
+                                    Kontakt
+                                </Button>
+                            </SheetClose>
+                        </NuxtLink>
+                        <NuxtLink to="/privacy-policy" class="text-center">
+                            <SheetClose>
+                                <Button variant="ghost" size="lg">
+                                    Datenschutz
+                                </Button>
+                            </SheetClose>
+                        </NuxtLink>
+                        <NuxtLink to="/imprint" class="text-center">
+                            <SheetClose>
+                                <Button variant="ghost" size="lg">
+                                    Impressum
+                                </Button>
+                            </SheetClose>
+                        </NuxtLink>
+                    </SheetDescription>
+                </SheetContent>
+            </Sheet>
+        </div>
     </header>
 
     <main>
@@ -106,7 +102,7 @@ const isMobile = useMediaQuery('(max-width: 834px)');
                     FITNESSWISSENSCHAFTLER & ONLINE FITNESS COACH
                 </p>
             </div>
-            <div class="mt-4 flex lg:mt-0 ">
+            <div class="mt-4 flex gap-4 lg:mt-0 ">
                 <a href="https://www.instagram.com/fitness_elite.eu" target="_blank">
                     <Icon name="uil:instagram" class="size-10" />
                 </a>
