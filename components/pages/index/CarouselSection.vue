@@ -80,10 +80,11 @@ const carouselItems = [
         </h2>
         <div class="mt-5">
             <Carousel
-                class="w-full" :opts="{
+                :opts="{
                     align: 'start',
                     loop: true,
-                }" :plugins="[Autoplay({
+                }"
+                :plugins="[Autoplay({
                     delay: 5000,
                     stopOnMouseEnter: true,
                     stopOnInteraction: true,
