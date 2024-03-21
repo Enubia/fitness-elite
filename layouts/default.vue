@@ -95,11 +95,11 @@ import {
     <footer class="p-10 lg:p-20">
         <div class="content-center justify-between md:flex">
             <div>
-                <p class="my-2">
-                    &copy; {{ new Date().getFullYear() }} THOMAS LINDNER, B.A
+                <p class="my-2 uppercase">
+                    &copy; {{ new Date().getFullYear() }} Thomas Lindner, B.A
                 </p>
-                <p class="my-2">
-                    FITNESSWISSENSCHAFTLER & ONLINE FITNESS COACH
+                <p class="my-2 uppercase">
+                    Fitnesswissenschaftler & Online Fitness Coach
                 </p>
             </div>
             <div class="mt-4 flex gap-4 lg:mt-0 ">
