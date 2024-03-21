@@ -1,3 +1,12 @@
+<script setup lang="ts">
+useSeoMeta({
+    title: 'Fitness Elite | Impressum',
+    description: 'Impressum von Fitness Elite',
+    robots: 'index, follow',
+    author: 'Thomas Lindner',
+});
+</script>
+
 <template>
     <div class="bg-foreground text-background">
         <div class="container justify-between py-16 lg:flex">
