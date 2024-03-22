@@ -6,7 +6,7 @@ import {
     NavigationMenuLink,
     NavigationMenuList,
     navigationMenuTriggerStyle,
-} from '@/components/ui/navigation-menu';
+} from '~/components/ui/navigation-menu';
 import {
     Sheet,
     SheetClose,
@@ -15,7 +15,7 @@ import {
     SheetHeader,
     SheetTitle,
     SheetTrigger,
-} from '@/components/ui/sheet';
+} from '~/components/ui/sheet';
 </script>
 
 <template>

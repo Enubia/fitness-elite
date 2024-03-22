@@ -2,8 +2,8 @@
 import { ArrowRightIcon } from '@radix-icons/vue';
 import { useCarousel } from './useCarousel';
 import type { WithClassAsProps } from './interface';
-import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
+import { cn } from '~/lib/utils';
+import { Button } from '~/components/ui/button';
 
 const props = defineProps<WithClassAsProps>();
 
