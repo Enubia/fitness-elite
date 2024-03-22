@@ -137,7 +137,9 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '~/
                                     Maximale Flexibilität Deiner Trainingszeit
                                 </h3>
                                 <span>
-                                    Du kannst Deine Trainingseinheiten zu einem Zeitpunkt durchführen, der am besten zu Deinem Zeitplan passt, anstatt sich an feste Termine halten zu müssen.
+                                    Du kannst Deine Trainingseinheiten zu einem Zeitpunkt durchführen,
+                                    der am besten zu Deinem Zeitplan passt,
+                                    anstatt sich an feste Termine halten zu müssen.
                                 </span>
                             </div>
                         </AccordionContent>
