@@ -7,6 +7,7 @@ module.exports = {
     prefix: '',
 
     theme: {
+        default: 'dark',
         fontFamily: {
             heading: ['Anton', 'sans-serif'],
             sans: ['Montserrat', 'sans-serif'],

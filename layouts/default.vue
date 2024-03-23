@@ -1,21 +1,6 @@
 <script setup lang="ts">
 import { VisuallyHidden } from 'radix-vue';
-import {
-    NavigationMenu,
-    NavigationMenuItem,
-    NavigationMenuLink,
-    NavigationMenuList,
-    navigationMenuTriggerStyle,
-} from '~/components/ui/navigation-menu';
-import {
-    Sheet,
-    SheetClose,
-    SheetContent,
-    SheetDescription,
-    SheetHeader,
-    SheetTitle,
-    SheetTrigger,
-} from '~/components/ui/sheet';
+import { navigationMenuTriggerStyle } from '~/components/ui/navigation-menu';
 </script>
 
 <template>

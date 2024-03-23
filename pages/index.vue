@@ -3,7 +3,6 @@ import CarouselSection from '~/components/pages/index/CarouselSection.vue';
 import EliteEvolutionSection from '~/components/pages/index/EliteEvolutionSection.vue';
 import YourCoachSection from '~/components/pages/index/YourCoachSection.vue';
 import FAQSection from '~/components/pages/index/FAQSection.vue';
-import { Button } from '~/components/ui/button';
 
 useSeoMeta({
     title: 'Fitness Elite | Your all in one coaching',
