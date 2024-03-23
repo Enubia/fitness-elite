@@ -4,7 +4,7 @@ import { toTypedSchema } from '@vee-validate/zod';
 import * as z from 'zod';
 import { useToast } from '~/components/ui/toast';
 
-useSeoMeta({
+useServerSeoMeta({
     title: 'Fitness Elite | Kontakt',
     description: 'Kontakt von Fitness Elite',
     robots: 'index, follow',

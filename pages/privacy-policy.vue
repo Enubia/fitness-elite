@@ -1,5 +1,5 @@
 <script setup lang="ts">
-useSeoMeta({
+useServerSeoMeta({
     title: 'Fitness Elite | Datenschutz',
     description: 'Datenschutzrichtlinien von Fitness Elite',
     robots: 'index, follow',

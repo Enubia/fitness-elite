@@ -1,5 +1,5 @@
 <script setup lang="ts">
-useSeoMeta({
+useServerSeoMeta({
     title: 'Fitness Elite | Impressum',
     description: 'Impressum von Fitness Elite',
     robots: 'index, follow',

@@ -4,7 +4,7 @@ import EliteEvolutionSection from '~/components/pages/index/EliteEvolutionSectio
 import YourCoachSection from '~/components/pages/index/YourCoachSection.vue';
 import FAQSection from '~/components/pages/index/FAQSection.vue';
 
-useSeoMeta({
+useServerSeoMeta({
     title: 'Fitness Elite | Your all in one coaching',
     description: 'Unleash your full potential with the all in one coaching "Elite Evolution"',
     robots: 'index, follow',
