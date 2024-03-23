@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '~/components/ui/accordion';
-</script>
-
 <template>
     <section>
         <div class="justify-center gap-28 lg:flex">

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./src/public/images/logo.webp" />
+  <img src="./public/images/logo.webp" />
 </p>
 
 Made with :heart: and :coffee: for [**Thomas Linder**](https://www.instagram.com/fitness_elite.eu)

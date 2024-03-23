@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import Autoplay from 'embla-carousel-autoplay';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '~/components/ui/carousel';
-import { Card, CardContent } from '~/components/ui/card';
 
 const carouselItems = [
     {
