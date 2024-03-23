@@ -1,6 +1,6 @@
 {
     "extends": "../.nuxt/tsconfig.server.json",
     "exclude": [
-        "../../*.config.js"
+        "../*.config.js"
     ]
 }
