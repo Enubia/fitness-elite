@@ -9,6 +9,7 @@
     "scripts": {
         "add-component": "pnpm dlx shadcn-vue@latest add",
         "build": "nuxt build",
+        "clean": "nuxi cleanup",
         "dev": "nuxt dev",
         "generate": "nuxt generate",
         "preview": "pnpm run build",
