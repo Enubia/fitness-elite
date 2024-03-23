@@ -11,7 +11,7 @@ useServerSeoMeta({
     <div class="bg-foreground text-background">
         <div class="container py-16">
             <section>
-                <h1 class="text-4xl md:text-6xl">
+                <h1 class="text-5xl">
                     DATENSCHUTZ
                 </h1>
                 <p class="mt-8">
