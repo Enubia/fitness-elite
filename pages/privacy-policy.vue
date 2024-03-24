@@ -1,9 +1,8 @@
-<script setup lang="ts">
-useServerSeoMeta({
+<script lang="ts" setup>
+useSeoMeta({
     title: 'Fitness Elite | Datenschutz',
     description: 'Datenschutzrichtlinien von Fitness Elite',
     robots: 'index, follow',
-    author: 'Thomas Lindner',
 });
 </script>
 
@@ -11,7 +10,7 @@ useServerSeoMeta({
     <div class="bg-foreground text-background">
         <div class="container py-16">
             <section>
-                <h1 class="text-5xl">
+                <h1 class="text-4xl md:text-5xl">
                     DATENSCHUTZ
                 </h1>
                 <p class="mt-8">

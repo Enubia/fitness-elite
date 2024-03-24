@@ -1,28 +1,34 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { useForm } from 'vee-validate';
 import { toTypedSchema } from '@vee-validate/zod';
 import * as z from 'zod';
 import { useToast } from '~/components/ui/toast';
 
-useServerSeoMeta({
+useSeoMeta({
     title: 'Fitness Elite | Kontakt',
     description: 'Kontakt von Fitness Elite',
     robots: 'index, follow',
-    author: 'Thomas Lindner',
 });
 
 const isDisabled = ref(false);
 
 const formSchema = toTypedSchema(z.object({
-    firstName: z.string().min(2).max(50),
-    lastName: z.string().min(2).max(50),
-    email: z.string().email(),
-    occupation: z.string().min(2).max(50),
-    message: z.string().min(10).max(500),
+    firstName: z.string().min(2, 'Vorname ist ein Pflichtfeld').max(50),
+    lastName: z.string().min(2, 'Nachname ist ein Pflichtfeld').max(50),
+    email: z.string().email('Bitte gib eine gültige Email-Adresse ein'),
+    occupation: z.string().min(2, 'Bitte gib einen Betreff ein').max(50),
+    message: z.string().min(10, 'Bitte gib eine Nachricht ein').max(500),
 }));
 
 const form = useForm({
     validationSchema: formSchema,
+    initialValues: {
+        firstName: '',
+        lastName: '',
+        email: '',
+        occupation: '',
+        message: '',
+    },
 });
 
 const { toast } = useToast();
@@ -80,9 +86,9 @@ const onSubmit = form.handleSubmit(async (values) => {
                 <Card class="w-full rounded-sm bg-foreground text-background">
                     <CardContent>
                         <form @submit="onSubmit">
-                            <div class="items-center gap-4 lg:flex">
+                            <div class="content-center items-center gap-4 lg:flex">
                                 <FormField v-slot="{ componentField: firstName }" name="firstName">
-                                    <FormItem>
+                                    <FormItem class="mt-3">
                                         <FormLabel>Vorname</FormLabel>
                                         <FormControl>
                                             <Input type="text" v-bind="firstName" />
@@ -91,7 +97,7 @@ const onSubmit = form.handleSubmit(async (values) => {
                                     </FormItem>
                                 </FormField>
                                 <FormField v-slot="{ componentField: lastName }" name="lastName">
-                                    <FormItem>
+                                    <FormItem class="mt-3">
                                         <FormLabel>Nachname</FormLabel>
                                         <FormControl>
                                             <Input type="text" v-bind="lastName" />
@@ -135,7 +141,7 @@ const onSubmit = form.handleSubmit(async (values) => {
                             </div>
                             <Button
                                 :disabled="isDisabled" type="submit"
-                                class="mt-4 flex w-full justify-center hover:bg-primary/90 disabled:bg-gray-500 lg:w-auto"
+                                class="mt-4 flex w-full justify-center hover:bg-primary/90 disabled:bg-gray-500 lg:w-1/3"
                             >
                                 <Icon v-if="isDisabled" name="svg-spinners:90-ring-with-bg" class="me-2 size-6" />
                                 <span>Absenden</span>

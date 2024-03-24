@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import Autoplay from 'embla-carousel-autoplay';
 
 const carouselItems = [
