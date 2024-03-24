@@ -65,7 +65,7 @@ devDependencies:
     specifier: 1.4.0
     version: 1.4.0
   '@nuxt/kit':
-    specifier: ^3.11.1
+    specifier: 3.11.1
     version: 3.11.1
   '@nuxtjs/google-fonts':
     specifier: 3.2.0
