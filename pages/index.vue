@@ -1,14 +1,13 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import CarouselSection from '~/components/pages/index/CarouselSection.vue';
 import EliteEvolutionSection from '~/components/pages/index/EliteEvolutionSection.vue';
 import YourCoachSection from '~/components/pages/index/YourCoachSection.vue';
 import FAQSection from '~/components/pages/index/FAQSection.vue';
 
-useServerSeoMeta({
+useSeoMeta({
     title: 'Fitness Elite | Your all in one coaching',
     description: 'Unleash your full potential with the all in one coaching "Elite Evolution"',
     robots: 'index, follow',
-    author: 'Thomas Lindner',
 });
 </script>
 
@@ -29,9 +28,11 @@ useServerSeoMeta({
                     <span class="text-4xl italic text-primary">"Elite Evolution"</span>
                 </div>
                 <div class="flex justify-center">
-                    <Button size="xl" class="w-2/3 text-lg uppercase">
-                        Starte jetzt
-                    </Button>
+                    <NuxtLink to="/questionnaire" class="flex w-2/3 justify-center">
+                        <Button size="xl" class="w-full text-lg uppercase">
+                            Starte jetzt
+                        </Button>
+                    </NuxtLink>
                 </div>
             </div>
         </div>
@@ -42,9 +43,11 @@ useServerSeoMeta({
         <CarouselSection class="mt-20" />
         <FAQSection class="mt-20" />
         <div class="my-20 flex justify-center">
-            <Button size="xl" class="text-lg uppercase">
-                Starte jetzt
-            </Button>
+            <NuxtLink to="/questionnaire">
+                <Button size="xl" class="text-lg uppercase">
+                    Starte jetzt
+                </Button>
+            </NuxtLink>
         </div>
     </div>
 </template>

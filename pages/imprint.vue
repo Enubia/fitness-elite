@@ -1,9 +1,8 @@
-<script setup lang="ts">
-useServerSeoMeta({
+<script lang="ts" setup>
+useSeoMeta({
     title: 'Fitness Elite | Impressum',
     description: 'Impressum von Fitness Elite',
     robots: 'index, follow',
-    author: 'Thomas Lindner',
 });
 </script>
 

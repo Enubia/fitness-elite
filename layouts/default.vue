@@ -4,7 +4,9 @@ import { navigationMenuTriggerStyle } from '~/components/ui/navigation-menu';
 </script>
 
 <template>
-    <header class="sticky top-0 z-40 flex content-center justify-between bg-background py-5 md:px-3 lg:relative lg:top-auto">
+    <header
+        class="sticky top-0 z-40 flex content-center justify-between bg-background py-5 md:px-3 lg:relative lg:top-auto"
+    >
         <div class="w-3/4 ps-5 md:ps-10 lg:ps-20">
             <NuxtLink to="/">
                 <NuxtImg src="/svg/logo.svg" alt="Logo" />
@@ -21,14 +23,9 @@ import { navigationMenuTriggerStyle } from '~/components/ui/navigation-menu';
                                     Kontakt
                                 </NavigationMenuLink>
                             </NuxtLink>
-                            <NuxtLink to="/privacy-policy">
+                            <NuxtLink to="/questionnaire">
                                 <NavigationMenuLink :class="navigationMenuTriggerStyle()">
-                                    Datenschutz
-                                </NavigationMenuLink>
-                            </NuxtLink>
-                            <NuxtLink to="/imprint">
-                                <NavigationMenuLink :class="navigationMenuTriggerStyle()">
-                                    Impressum
+                                    Fragebogen
                                 </NavigationMenuLink>
                             </NuxtLink>
                         </NavigationMenuItem>
@@ -55,17 +52,10 @@ import { navigationMenuTriggerStyle } from '~/components/ui/navigation-menu';
                                     </Button>
                                 </SheetClose>
                             </NuxtLink>
-                            <NuxtLink to="/privacy-policy" class="text-center">
+                            <NuxtLink to="/questionnaire" class="text-center">
                                 <SheetClose>
                                     <Button variant="ghost" size="lg">
-                                        Datenschutz
-                                    </Button>
-                                </SheetClose>
-                            </NuxtLink>
-                            <NuxtLink to="/imprint" class="text-center">
-                                <SheetClose>
-                                    <Button variant="ghost" size="lg">
-                                        Impressum
+                                        Fragebogen
                                     </Button>
                                 </SheetClose>
                             </NuxtLink>
@@ -80,8 +70,8 @@ import { navigationMenuTriggerStyle } from '~/components/ui/navigation-menu';
         <slot />
     </main>
 
-    <footer class="p-10 lg:p-20">
-        <div class="content-center justify-between md:flex">
+    <footer class="p-10 text-muted-foreground lg:p-20">
+        <div class="content-center justify-between lg:flex">
             <div>
                 <p class="my-2 uppercase">
                     &copy; {{ new Date().getFullYear() }} Thomas Lindner, B.A
@@ -90,13 +80,28 @@ import { navigationMenuTriggerStyle } from '~/components/ui/navigation-menu';
                     Fitnesswissenschaftler & Online Fitness Coach
                 </p>
             </div>
-            <div class="mt-4 flex gap-4 lg:mt-0">
-                <a href="https://www.instagram.com/fitness_elite.eu" target="_blank">
-                    <Icon name="uil:instagram" class="size-10 hover:text-slate-700/90" />
-                </a>
-                <a href="https://www.facebook.com/reel/472712058295541" target="_blank">
-                    <Icon name="uil:facebook-f" class="size-10 hover:text-slate-700/90" />
-                </a>
+
+            <div class="mt-4 content-center gap-4 lg:mt-0 lg:flex">
+                <div>
+                    <p class="my-2 uppercase">
+                        <NuxtLink to="/imprint" class="hover:underline">
+                            Impressum
+                        </NuxtLink>
+                    </p>
+                    <p class="my-2 uppercase">
+                        <NuxtLink to="/privacy" class="hover:underline">
+                            Datenschutz
+                        </NuxtLink>
+                    </p>
+                </div>
+                <div class="mt-4 lg:mt-0">
+                    <a href="https://www.instagram.com/fitness_elite.eu" target="_blank">
+                        <Icon name="uil:instagram" class="size-10 hover:text-slate-700/90" />
+                    </a>
+                    <a href="https://www.facebook.com/reel/472712058295541" target="_blank">
+                        <Icon name="uil:facebook-f" class="size-10 hover:text-slate-700/90" />
+                    </a>
+                </div>
             </div>
         </div>
     </footer>

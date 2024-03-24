@@ -1,8 +1,7 @@
 import { FieldContextKey, useFieldError, useIsFieldDirty, useIsFieldTouched, useIsFieldValid } from 'vee-validate';
 import { inject } from 'vue';
 
-export const FORM_ITEM_INJECTION_KEY
-  = Symbol('FORM_ITEM_INJECTION_KEY') as InjectionKey<string>;
+export const FORM_ITEM_INJECTION_KEY = Symbol('FORM_ITEM_INJECTION_KEY') as InjectionKey<string>;
 
 export function useFormField() {
     const fieldContext = inject(FieldContextKey);

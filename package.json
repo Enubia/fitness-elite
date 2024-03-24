@@ -12,8 +12,10 @@
         "clean": "nuxi cleanup",
         "dev": "nuxt dev",
         "generate": "nuxt generate",
+        "nuxi": "pnpm dlx nuxi add",
+        "postinstall": "nuxt prepare && simple-git-hooks",
         "preview": "pnpm run build",
-        "postinstall": "nuxt prepare && simple-git-hooks"
+        "start": "node .output/server/index.mjs"
     },
     "dependencies": {
         "@radix-icons/vue": "1.0.0",
@@ -37,6 +39,7 @@
         "@antfu/eslint-config": "2.9.0",
         "@eslint/eslintrc": "3.0.2",
         "@nuxt/image": "1.4.0",
+        "@nuxt/kit": "^3.11.1",
         "@nuxtjs/google-fonts": "3.2.0",
         "@nuxtjs/tailwindcss": "6.11.4",
         "@vueuse/core": "10.9.0",
