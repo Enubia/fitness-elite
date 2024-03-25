@@ -6,7 +6,7 @@ const compat = new FlatCompat();
 export default antfu(
     {
         rules: {
-            'no-console': ['warn', { allow: ['warn', 'error'] }],
+            'no-console': ['warn', { allow: ['warn', 'error', 'info'] }],
             'node/prefer-global/process': 'off',
             'style/brace-style': ['error', '1tbs'],
             'style/comma-dangle': ['error', 'always-multiline'],

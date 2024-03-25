@@ -39,12 +39,12 @@ const isMobile = useMediaQuery('(max-width: 768px)');
 const onSubmit = form.handleSubmit(async (values) => {
     isDisabled.value = true;
 
-    const { data, error } = await useFetch('/api/contact', {
+    const { status } = await useFetch('/api/contact', {
         method: 'POST',
         body: JSON.stringify(values),
     });
 
-    if (error.value) {
+    if (status.value === 'error') {
         toast({
             title: 'Fehler',
             description: 'Es ist ein Fehler aufgetreten. Bitte versuche es später erneut.',
@@ -53,7 +53,7 @@ const onSubmit = form.handleSubmit(async (values) => {
         });
     }
 
-    if (data) {
+    if (status.value === 'success') {
         toast({
             title: 'Erfolgreich',
             description: 'Deine Nachricht wurde erfolgreich gesendet. Ich werde mich so schnell wie möglich bei dir melden.',

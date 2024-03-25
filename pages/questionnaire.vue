@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { toTypedSchema } from '@vee-validate/zod';
+import { useMediaQuery } from '@vueuse/core';
 import { useForm } from 'vee-validate';
 import { z } from 'zod';
 import { useToast } from '~/components/ui/toast';
@@ -40,28 +41,42 @@ const form = useForm({
 
 const { toast } = useToast();
 
+const isMobile = useMediaQuery('(max-width: 768px)');
+
 const submit = form.handleSubmit(async (values) => {
     isDisabled.value = true;
 
-    const { data, error } = await useFetch('/api/questionnaire', {
+    const goals = {
+        'muscle-building': 'Muskelaufbau',
+        'fat-loss': 'Gewichtsverlust',
+        'gain-energy': 'Energie gewinnen',
+        'healthy-lifestyle': 'Gesunder Lebensstil',
+    };
+
+    values = {
+        ...values,
+        goal: goals[values.goal as keyof typeof goals],
+    };
+
+    const { status } = await useFetch('/api/contact', {
         method: 'POST',
         body: JSON.stringify(values),
     });
 
-    if (error.value) {
+    if (status.value === 'error') {
         toast({
             title: 'Fehler',
             description: 'Es ist ein Fehler aufgetreten. Bitte versuche es später erneut.',
             variant: 'destructive',
-            duration: 3000,
+            duration: isMobile.value ? 3000 : 5000,
         });
     }
 
-    if (data) {
+    if (status.value === 'success') {
         toast({
             title: 'Erfolgreich',
             description: 'Deine Nachricht wurde erfolgreich gesendet. Ich werde mich so schnell wie möglich bei dir melden.',
-            duration: 3000,
+            duration: isMobile.value ? 3000 : 5000,
         });
         form.resetForm();
     }

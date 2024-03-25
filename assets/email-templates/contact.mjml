@@ -1,0 +1,50 @@
+<mjml>
+    <mj-head>
+        <mj-attributes>
+            <mj-all font-family="helvetica" />
+            <mj-text font-size="16px" color="#000" />
+        </mj-attributes>
+        <mj-style>
+            .card {
+                border-radius: 3px;
+                padding: 0 10px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            }
+            .phone {
+                color: #aba54c;
+            }
+        </mj-style>
+    </mj-head>
+    <mj-body
+        background-color="white"
+    >
+        <mj-wrapper
+            css-class="card"
+        >
+            <mj-section>
+                <mj-column>
+                    <mj-image src="cid:logo" alt="logo" />
+                    <mj-text font-size="24px" color="#aba54c" font-family="helvetica">Hey Thomas,</mj-text>
+                    <mj-text>Du hast eine neue nachricht von deinem Kontakt Formular!</mj-text>
+                    <mj-text>Der Absender hat folgende Daten hinterlassen:</mj-text>
+                </mj-column>
+            </mj-section>
+            <mj-section>
+                <mj-column>
+                    <mj-text>{{firstName}} {{lastName}}</mj-text>
+                    <mj-text>{{email}}</mj-text>
+                    <mj-divider border-width="1px" border-color="#A9A9A9"  />
+                    <mj-text>
+                        <p><strong>{{occupation}}</strong></p>
+                        <p>{{message}}</p>
+                    </mj-text>
+                </mj-column>
+            </mj-section>
+            <mj-section>
+                <mj-column>
+                    <mj-button width="25%" href="mailto:{{email}}" background-color="#aba54c" color="white">Antworten</mj-button>
+                </mj-column>
+            </mj-section>
+        </mj-wrapper>
+    </mj-body>
+</mjml>

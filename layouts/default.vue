@@ -23,11 +23,6 @@ import { navigationMenuTriggerStyle } from '~/components/ui/navigation-menu';
                                     Kontakt
                                 </NavigationMenuLink>
                             </NuxtLink>
-                            <NuxtLink to="/questionnaire">
-                                <NavigationMenuLink :class="navigationMenuTriggerStyle()">
-                                    Fragebogen
-                                </NavigationMenuLink>
-                            </NuxtLink>
                         </NavigationMenuItem>
                     </NavigationMenuList>
                 </NavigationMenu>
@@ -49,13 +44,6 @@ import { navigationMenuTriggerStyle } from '~/components/ui/navigation-menu';
                                 <SheetClose>
                                     <Button variant="ghost" size="lg">
                                         Kontakt
-                                    </Button>
-                                </SheetClose>
-                            </NuxtLink>
-                            <NuxtLink to="/questionnaire" class="text-center">
-                                <SheetClose>
-                                    <Button variant="ghost" size="lg">
-                                        Fragebogen
                                     </Button>
                                 </SheetClose>
                             </NuxtLink>
@@ -89,7 +77,7 @@ import { navigationMenuTriggerStyle } from '~/components/ui/navigation-menu';
                         </NuxtLink>
                     </p>
                     <p class="my-2 uppercase">
-                        <NuxtLink to="/privacy" class="hover:underline">
+                        <NuxtLink to="/privacy-policy" class="hover:underline">
                             Datenschutz
                         </NuxtLink>
                     </p>
