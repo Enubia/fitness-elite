@@ -43,6 +43,18 @@ const { toast } = useToast();
 const submit = form.handleSubmit(async (values) => {
     isDisabled.value = true;
 
+    const goals = {
+        'muscle-building': 'Muskelaufbau',
+        'fat-loss': 'Gewichtsverlust',
+        'gain-energy': 'Energie gewinnen',
+        'healthy-lifestyle': 'Gesunder Lebensstil',
+    };
+
+    values = {
+        ...values,
+        goal: goals[values.goal as keyof typeof goals],
+    };
+
     const { data, error } = await useFetch('/api/questionnaire', {
         method: 'POST',
         body: JSON.stringify(values),

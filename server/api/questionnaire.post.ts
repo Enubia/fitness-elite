@@ -1,8 +1,7 @@
+import Messaging from '~/lib/messaging';
+
 export default defineEventHandler(async (event) => {
-    const body = await readBody(event);
+    const { goal, challenge, result, name, email, phone, referrer } = await readBody(event);
 
-    // TODO: dummy log, will be replace with nodemailer implementation
-    console.log(body);
-
-    return new Response('OK', { status: 200 });
+    await Messaging.sendQuestionnaireMail(event, goal, challenge, result, name, email, phone, referrer);
 });
