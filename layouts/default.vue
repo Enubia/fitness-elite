@@ -71,7 +71,7 @@ import { navigationMenuTriggerStyle } from '~/components/ui/navigation-menu';
     </main>
 
     <footer class="p-10 text-muted-foreground lg:p-20">
-        <div class="items-center justify-between lg:flex">
+        <div class="items-center justify-between text-center md:flex md:text-left">
             <div>
                 <p class="my-2 uppercase">
                     &copy; {{ new Date().getFullYear() }} Thomas Lindner, B.A
@@ -94,7 +94,7 @@ import { navigationMenuTriggerStyle } from '~/components/ui/navigation-menu';
                         </NuxtLink>
                     </p>
                 </div>
-                <div>
+                <div class="mt-4 lg:mt-0">
                     <a href="https://www.instagram.com/fitness_elite.eu" target="_blank">
                         <Icon name="uil:instagram" class="size-10 hover:text-slate-700/90" />
                     </a>

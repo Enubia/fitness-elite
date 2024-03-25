@@ -2,6 +2,7 @@
 import { useForm } from 'vee-validate';
 import { toTypedSchema } from '@vee-validate/zod';
 import * as z from 'zod';
+import { useMediaQuery } from '@vueuse/core';
 import { useToast } from '~/components/ui/toast';
 
 useSeoMeta({
@@ -33,6 +34,8 @@ const form = useForm({
 
 const { toast } = useToast();
 
+const isMobile = useMediaQuery('(max-width: 768px)');
+
 const onSubmit = form.handleSubmit(async (values) => {
     isDisabled.value = true;
 
@@ -46,7 +49,7 @@ const onSubmit = form.handleSubmit(async (values) => {
             title: 'Fehler',
             description: 'Es ist ein Fehler aufgetreten. Bitte versuche es später erneut.',
             variant: 'destructive',
-            duration: 3000,
+            duration: isMobile.value ? 3000 : 5000,
         });
     }
 
@@ -54,7 +57,7 @@ const onSubmit = form.handleSubmit(async (values) => {
         toast({
             title: 'Erfolgreich',
             description: 'Deine Nachricht wurde erfolgreich gesendet. Ich werde mich so schnell wie möglich bei dir melden.',
-            duration: 3000,
+            duration: isMobile.value ? 3000 : 5000,
         });
         form.resetForm();
     }
