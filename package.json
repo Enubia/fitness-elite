@@ -8,12 +8,12 @@
     },
     "scripts": {
         "add-component": "pnpm dlx shadcn-vue@latest add",
-        "build": "nuxt build",
+        "build": "nuxi build",
         "clean": "nuxi cleanup",
-        "dev": "nuxt dev",
-        "generate": "nuxt generate",
+        "dev": "nuxi dev --dotenv .env.local",
+        "generate": "nuxi generate",
         "nuxi": "pnpm dlx nuxi add",
-        "postinstall": "nuxt prepare && simple-git-hooks",
+        "postinstall": "nuxi prepare && simple-git-hooks",
         "preview": "pnpm run build",
         "start": "node .output/server/index.mjs"
     },

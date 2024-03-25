@@ -1,7 +1,9 @@
 export const envVariables = {
-    env: process.env.NODE_ENV || 'development',
+    env: String(process.env.NODE_ENV),
     mail: {
-        address: process.env.EMAIL_ADDRESS,
-        password: process.env.APPLICATION_PASSWORD,
+        smtpHost: String(process.env.SMTP_HOST),
+        smtpPort: Number(process.env.SMTP_PORT),
+        address: String(process.env.EMAIL_ADDRESS),
+        password: String(process.env.APPLICATION_PASSWORD),
     },
 };

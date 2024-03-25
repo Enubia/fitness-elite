@@ -55,8 +55,8 @@ export default class Messaging {
             }
         } else {
             return nodemailer.createTransport({
-                host: process.env.SMTP_HOST,
-                port: process.env.SMTP_PORT,
+                host: config.mail.smtpHost,
+                port: config.mail.smtpPort,
                 auth: {
                     user: config.mail.address,
                     pass: config.mail.password,
