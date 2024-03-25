@@ -86,7 +86,7 @@ const onSubmit = form.handleSubmit(async (values) => {
                 <Card class="w-full rounded-sm bg-foreground text-background">
                     <CardContent>
                         <form @submit="onSubmit">
-                            <div class="content-center items-center gap-4 lg:flex">
+                            <div class="items-center gap-4 lg:flex">
                                 <FormField v-slot="{ componentField: firstName }" name="firstName">
                                     <FormItem class="mt-3">
                                         <FormLabel>Vorname</FormLabel>

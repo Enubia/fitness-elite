@@ -5,7 +5,7 @@ import { navigationMenuTriggerStyle } from '~/components/ui/navigation-menu';
 
 <template>
     <header
-        class="sticky top-0 z-40 flex content-center justify-between bg-background py-5 md:px-3 lg:relative lg:top-auto"
+        class="sticky top-0 z-40 flex items-center justify-between bg-background py-5 md:px-3 lg:relative lg:top-auto"
     >
         <div class="w-3/4 ps-5 md:ps-10 lg:ps-20">
             <NuxtLink to="/">
@@ -71,7 +71,7 @@ import { navigationMenuTriggerStyle } from '~/components/ui/navigation-menu';
     </main>
 
     <footer class="p-10 text-muted-foreground lg:p-20">
-        <div class="content-center justify-between lg:flex">
+        <div class="items-center justify-between lg:flex">
             <div>
                 <p class="my-2 uppercase">
                     &copy; {{ new Date().getFullYear() }} Thomas Lindner, B.A
@@ -81,7 +81,7 @@ import { navigationMenuTriggerStyle } from '~/components/ui/navigation-menu';
                 </p>
             </div>
 
-            <div class="mt-4 content-center gap-4 lg:mt-0 lg:flex">
+            <div class="mt-4 items-center gap-16 lg:mt-0 lg:flex">
                 <div>
                     <p class="my-2 uppercase">
                         <NuxtLink to="/imprint" class="hover:underline">
@@ -94,7 +94,7 @@ import { navigationMenuTriggerStyle } from '~/components/ui/navigation-menu';
                         </NuxtLink>
                     </p>
                 </div>
-                <div class="mt-4 lg:mt-0">
+                <div>
                     <a href="https://www.instagram.com/fitness_elite.eu" target="_blank">
                         <Icon name="uil:instagram" class="size-10 hover:text-slate-700/90" />
                     </a>
