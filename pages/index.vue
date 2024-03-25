@@ -1,9 +1,4 @@
 <script lang="ts" setup>
-import CarouselSection from '~/components/pages/index/CarouselSection.vue';
-import EliteEvolutionSection from '~/components/pages/index/EliteEvolutionSection.vue';
-import YourCoachSection from '~/components/pages/index/YourCoachSection.vue';
-import FAQSection from '~/components/pages/index/FAQSection.vue';
-
 useSeoMeta({
     title: 'Fitness Elite | Your all in one coaching',
     description: 'Unleash your full potential with the all in one coaching "Elite Evolution"',
@@ -38,10 +33,10 @@ useSeoMeta({
         </div>
     </section>
     <div class="container">
-        <EliteEvolutionSection class="mt-20" />
-        <YourCoachSection class="mt-20" />
-        <CarouselSection class="mt-20" />
-        <FAQSection class="mt-20" />
+        <IndexEliteEvolutionSection class="mt-20" />
+        <IndexYourCoachSection class="mt-20" />
+        <IndexCarouselSection class="mt-20" />
+        <IndexFAQSection class="mt-20" />
         <div class="my-20 flex justify-center">
             <NuxtLink to="/questionnaire">
                 <Button size="xl" class="text-lg uppercase">

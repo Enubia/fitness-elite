@@ -4,6 +4,12 @@ export default defineNuxtConfig({
         enabled: true,
     },
 
+    components: {
+        dirs: [
+            './components/pages',
+        ],
+    },
+
     modules: [
         '@nuxt/image',
         '@nuxtjs/google-fonts',
