@@ -28,6 +28,10 @@ import { navigationMenuTriggerStyle } from '~/components/ui/navigation-menu';
                 </NavigationMenu>
             </div>
 
+            <!-- <div class="hidden pe-5 lg:inline-flex">
+                <LocaleSwitcher />
+            </div> -->
+
             <div class="inline-flex pe-5 md:pe-10 lg:hidden">
                 <Sheet>
                     <SheetTrigger>
@@ -47,6 +51,7 @@ import { navigationMenuTriggerStyle } from '~/components/ui/navigation-menu';
                                     </Button>
                                 </SheetClose>
                             </NuxtLink>
+                            <!-- <LocaleSwitcher /> -->
                         </SheetDescription>
                     </SheetContent>
                 </Sheet>

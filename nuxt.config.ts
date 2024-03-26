@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     components: {
         dirs: [
             './components/pages',
+            './components/shared',
         ],
     },
 
@@ -40,18 +41,23 @@ export default defineNuxtConfig({
     },
 
     i18n: {
-        defaultLocale: 'de-DE',
+        defaultLocale: 'de',
+        // not used yet
         langDir: './locales',
-        lazy: true,
+        // lazy: true,
         locales: [
             {
-                code: 'de-DE',
-                dir: 'ltr',
+                code: 'de',
+                flag: 'circle-flags:de',
+                name: 'Deutsch',
                 file: 'de-DE.json',
-                flag: 'gb',
                 isCatchallLocale: true,
-                iso: 'de-DE',
-                name: 'German',
+            },
+            {
+                code: 'en',
+                flag: 'circle-flags:us',
+                name: 'English',
+                file: 'en-US.json',
             },
         ],
         strategy: 'prefix_except_default',
