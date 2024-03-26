@@ -16,6 +16,8 @@ export default defineNuxtConfig({
         '@nuxtjs/tailwindcss',
         'nuxt-icon',
         'shadcn-nuxt',
+        'nuxt-zod-i18n',
+        '@nuxtjs/i18n',
     ],
 
     googleFonts: {
@@ -35,5 +37,24 @@ export default defineNuxtConfig({
          * @default "./components/ui"
          */
         componentDir: './components/ui',
+    },
+
+    i18n: {
+        defaultLocale: 'de-DE',
+        langDir: './locales',
+        lazy: true,
+        locales: [
+            {
+                code: 'de-DE',
+                dir: 'ltr',
+                file: 'de-DE.json',
+                flag: 'gb',
+                isCatchallLocale: true,
+                iso: 'de-DE',
+                name: 'German',
+            },
+        ],
+        strategy: 'prefix_except_default',
+        types: 'composition',
     },
 });

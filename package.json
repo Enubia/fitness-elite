@@ -10,11 +10,9 @@
         "add-component": "pnpm dlx shadcn-vue@latest add",
         "build": "nuxi build",
         "clean": "nuxi cleanup",
-        "dev": "nuxi dev --dotenv .env.local",
-        "generate": "nuxi generate",
+        "dev": "nuxi dev",
         "nuxi": "pnpm dlx nuxi add",
         "postinstall": "nuxi prepare && simple-git-hooks",
-        "preview": "pnpm run build",
         "start": "node .output/server/index.mjs"
     },
     "dependencies": {
@@ -44,6 +42,7 @@
         "@nuxt/image": "1.4.0",
         "@nuxt/kit": "3.11.1",
         "@nuxtjs/google-fonts": "3.2.0",
+        "@nuxtjs/i18n": "^8.2.0",
         "@nuxtjs/tailwindcss": "6.11.4",
         "@types/html-minifier-terser": "^7.0.2",
         "@types/mjml": "^4.7.4",
@@ -53,6 +52,7 @@
         "eslint-plugin-tailwindcss": "3.15.1",
         "eslint-plugin-unused-imports": "3.1.0",
         "nuxt-icon": "0.6.10",
+        "nuxt-zod-i18n": "^1.4.0",
         "shadcn-nuxt": "0.10.2",
         "simple-git-hooks": "2.11.0",
         "typescript": "5.4.3"

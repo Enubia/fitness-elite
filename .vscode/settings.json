@@ -33,6 +33,7 @@
         "**/node_modules": true,
         "**/dist": true,
         "**/.nuxt": true,
+        "**/.output": true,
         "**/.vscode": true
     }
 }

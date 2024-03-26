@@ -2,7 +2,6 @@
 import { useForm } from 'vee-validate';
 import { toTypedSchema } from '@vee-validate/zod';
 import * as z from 'zod';
-import { useMediaQuery } from '@vueuse/core';
 import { useToast } from '~/components/ui/toast';
 
 useSeoMeta({
@@ -14,11 +13,11 @@ useSeoMeta({
 const isDisabled = ref(false);
 
 const formSchema = toTypedSchema(z.object({
-    firstName: z.string().min(2, 'Vorname ist ein Pflichtfeld').max(50),
-    lastName: z.string().min(2, 'Nachname ist ein Pflichtfeld').max(50),
-    email: z.string().email('Bitte gib eine gültige Email-Adresse ein'),
-    occupation: z.string().min(2, 'Bitte gib einen Betreff ein').max(50),
-    message: z.string().min(10, 'Bitte gib eine Nachricht ein').max(500),
+    firstName: z.string().min(2).max(20),
+    lastName: z.string().max(20),
+    email: z.string().email(),
+    occupation: z.string().min(2).max(50),
+    message: z.string().min(10).max(500),
 }));
 
 const form = useForm({
@@ -34,8 +33,6 @@ const form = useForm({
 
 const { toast } = useToast();
 
-const isMobile = useMediaQuery('(max-width: 768px)');
-
 const onSubmit = form.handleSubmit(async (values) => {
     isDisabled.value = true;
 
@@ -49,7 +46,6 @@ const onSubmit = form.handleSubmit(async (values) => {
             title: 'Fehler',
             description: 'Es ist ein Fehler aufgetreten. Bitte versuche es später erneut.',
             variant: 'destructive',
-            duration: isMobile.value ? 3000 : 5000,
         });
     }
 
@@ -57,7 +53,6 @@ const onSubmit = form.handleSubmit(async (values) => {
         toast({
             title: 'Erfolgreich',
             description: 'Deine Nachricht wurde erfolgreich gesendet. Ich werde mich so schnell wie möglich bei dir melden.',
-            duration: isMobile.value ? 3000 : 5000,
         });
         form.resetForm();
     }
@@ -92,7 +87,12 @@ const onSubmit = form.handleSubmit(async (values) => {
                             <div class="items-center gap-4 lg:flex">
                                 <FormField v-slot="{ componentField: firstName }" name="firstName">
                                     <FormItem class="mt-3">
-                                        <FormLabel>Vorname</FormLabel>
+                                        <FormLabel>
+                                            <span>Vorname</span>
+                                            <sup>
+                                                <Icon name="mdi:asterisk" class="inline size-2 text-destructive" />
+                                            </sup>
+                                        </FormLabel>
                                         <FormControl>
                                             <Input type="text" v-bind="firstName" />
                                         </FormControl>
@@ -112,7 +112,12 @@ const onSubmit = form.handleSubmit(async (values) => {
                             <div class="mt-3 w-full">
                                 <FormField v-slot="{ componentField: email }" name="email">
                                     <FormItem>
-                                        <FormLabel>Email</FormLabel>
+                                        <FormLabel>
+                                            <span>Email</span>
+                                            <sup>
+                                                <Icon name="mdi:asterisk" class="inline size-2 text-destructive" />
+                                            </sup>
+                                        </FormLabel>
                                         <FormControl>
                                             <Input type="email" v-bind="email" />
                                         </FormControl>
@@ -123,7 +128,12 @@ const onSubmit = form.handleSubmit(async (values) => {
                             <div class="mt-3 w-full">
                                 <FormField v-slot="{ componentField: occupation }" name="occupation">
                                     <FormItem>
-                                        <FormLabel>Betreff</FormLabel>
+                                        <FormLabel>
+                                            <span>Betreff</span>
+                                            <sup>
+                                                <Icon name="mdi:asterisk" class="inline size-2 text-destructive" />
+                                            </sup>
+                                        </FormLabel>
                                         <FormControl>
                                             <Input type="text" v-bind="occupation" />
                                         </FormControl>
@@ -134,7 +144,12 @@ const onSubmit = form.handleSubmit(async (values) => {
                             <div class="mt-3 w-full">
                                 <FormField v-slot="{ componentField: message }" name="message">
                                     <FormItem>
-                                        <FormLabel>Nachricht</FormLabel>
+                                        <FormLabel>
+                                            <span>Nachricht</span>
+                                            <sup>
+                                                <Icon name="mdi:asterisk" class="inline size-2 text-destructive" />
+                                            </sup>
+                                        </FormLabel>
                                         <FormControl>
                                             <Textarea v-bind="message" rows="10" />
                                         </FormControl>

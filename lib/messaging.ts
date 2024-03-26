@@ -118,7 +118,7 @@ export default class Messaging {
 
         if (errors.length > 0) {
             console.error(errors);
-            setResponseStatus(event, 500);
+            return setResponseStatus(event, 500);
         }
 
         const minified = await minify(html);
@@ -138,11 +138,11 @@ export default class Messaging {
             );
 
             if (!success) {
-                setResponseStatus(event, 500);
+                return setResponseStatus(event, 500);
             }
         } catch (error) {
             console.error(error);
-            setResponseStatus(event, 500);
+            return setResponseStatus(event, 500);
         }
 
         setResponseStatus(event, 200);
@@ -162,7 +162,7 @@ export default class Messaging {
 
         if (errors.length > 0) {
             console.error(errors);
-            setResponseStatus(event, 500);
+            return setResponseStatus(event, 500);
         }
 
         const minified = await minify(html);
@@ -184,11 +184,11 @@ export default class Messaging {
             );
 
             if (!success) {
-                setResponseStatus(event, 500);
+                return setResponseStatus(event, 500);
             }
         } catch (error) {
             console.error(error);
-            setResponseStatus(event, 500);
+            return setResponseStatus(event, 500);
         }
 
         setResponseStatus(event, 200);
