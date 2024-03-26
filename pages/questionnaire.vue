@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { toTypedSchema } from '@vee-validate/zod';
-import { useMediaQuery } from '@vueuse/core';
 import { useForm } from 'vee-validate';
 import { z } from 'zod';
 import { useToast } from '~/components/ui/toast';
@@ -14,17 +13,13 @@ useSeoMeta({
 const isDisabled = ref(false);
 
 const formSchema = toTypedSchema(z.object({
-    goal: z.string({
-        required_error: 'Ziel ist ein Pflichtfeld',
-    }),
-    challenge: z.string().min(10, 'Herausforderung ist ein Pflichtfeld').max(500),
-    result: z.string().min(10, 'Traumergebnis ist ein Pflichtfeld').max(500),
-    name: z.string().min(2, 'Name ist ein Pflichtfeld').max(50),
-    email: z.string().email('Bitte gib eine gültige Email-Adresse ein'),
-    phone: z.string().min(10, 'Telefonnummer ist ein Pflichtfeld').max(20),
-    referrer: z.string({
-        required_error: 'Referrer ist ein Pflichtfeld',
-    }),
+    goal: z.enum(['muscle-building', 'fat-loss', 'gain-energy', 'healthy-lifestyle', 'i-want-it-all']),
+    challenge: z.string().min(10).max(500),
+    result: z.string().min(10).max(500),
+    name: z.string().min(2).max(50),
+    email: z.string().email(),
+    phone: z.string().min(10).max(20),
+    referrer: z.enum(['referral', 'internet-search', 'instagram', 'facebook']),
 }));
 
 const form = useForm({
@@ -35,13 +30,10 @@ const form = useForm({
         name: '',
         email: '',
         phone: '',
-        referrer: '',
     },
 });
 
 const { toast } = useToast();
-
-const isMobile = useMediaQuery('(max-width: 768px)');
 
 const submit = form.handleSubmit(async (values) => {
     isDisabled.value = true;
@@ -51,16 +43,25 @@ const submit = form.handleSubmit(async (values) => {
         'fat-loss': 'Gewichtsverlust',
         'gain-energy': 'Energie gewinnen',
         'healthy-lifestyle': 'Gesunder Lebensstil',
+        'i-want-it-all': 'Ich will alles',
     };
 
-    values = {
+    const referrers = {
+        referral: 'Empfehlung',
+        'internet-search': 'Internet-Suche',
+        instagram: 'Instagram',
+        facebook: 'Facebook',
+    };
+
+    const parsedValues = {
         ...values,
         goal: goals[values.goal as keyof typeof goals],
+        referrer: referrers[values.referrer as keyof typeof referrers],
     };
 
     const { status } = await useFetch('/api/contact', {
         method: 'POST',
-        body: JSON.stringify(values),
+        body: JSON.stringify(parsedValues),
     });
 
     if (status.value === 'error') {
@@ -68,7 +69,6 @@ const submit = form.handleSubmit(async (values) => {
             title: 'Fehler',
             description: 'Es ist ein Fehler aufgetreten. Bitte versuche es später erneut.',
             variant: 'destructive',
-            duration: isMobile.value ? 3000 : 5000,
         });
     }
 
@@ -76,7 +76,6 @@ const submit = form.handleSubmit(async (values) => {
         toast({
             title: 'Erfolgreich',
             description: 'Deine Nachricht wurde erfolgreich gesendet. Ich werde mich so schnell wie möglich bei dir melden.',
-            duration: isMobile.value ? 3000 : 5000,
         });
         form.resetForm();
     }

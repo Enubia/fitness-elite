@@ -1,0 +1,20 @@
+{
+    "zodI18n": {
+        "errors": {
+            "too_big": {
+                "string": {
+                    "exact": "Text muss genau {maximum} Zeichen enthalten",
+                    "inclusive": "Text darf höchstens {maximum} Zeichen enthalten",
+                    "not_inclusive": "Text muss weniger als {maximum} Zeichen enthalten"
+                }
+            },
+            "too_small": {
+                "string": {
+                    "exact": "Text muss genau {minimum} Zeichen enthalten",
+                    "inclusive": "Text muss mindestens {minimum} Zeichen enthalten",
+                    "not_inclusive": "Text muss mehr als {minimum} Zeichen enthalten"
+                }
+            }
+        }
+    }
+}
