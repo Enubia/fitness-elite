@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Icon } from '#components';
 
-defineProps<{ showLocalName: boolean }>();
+defineProps<{ showLocalName?: boolean }>();
 
 const { locale, locales, setLocale } = useI18n();
 
@@ -27,8 +27,8 @@ const DynamicIcon = defineComponent({
     <DropdownMenu>
         <DropdownMenuTrigger>
             <div :class="showLocalName ? 'flex justify-center items-center gap-2' : ''">
-                <DynamicIcon :name="currentLocale.flag" />
-                <span v-if="showLocalName">{{ currentLocale.name }}</span>
+                <DynamicIcon :name="currentLocale?.flag" />
+                <span v-if="showLocalName">{{ currentLocale?.name }}</span>
             </div>
         </DropdownMenuTrigger>
         <DropdownMenuContent>
