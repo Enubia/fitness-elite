@@ -4,6 +4,8 @@ useSeoMeta({
     description: 'Unleash your full potential with the all in one coaching "Elite Evolution"',
     robots: 'index, follow',
 });
+
+const localeRoute = useLocaleRoute();
 </script>
 
 <template>
@@ -23,7 +25,7 @@ useSeoMeta({
                     <span class="text-4xl italic text-primary">"Elite Evolution"</span>
                 </div>
                 <div class="flex justify-center">
-                    <NuxtLink to="/questionnaire" class="flex w-2/3 justify-center">
+                    <NuxtLink :to="localeRoute('/questionnaire')" class="flex w-2/3 justify-center">
                         <Button size="xl" class="w-full text-lg uppercase">
                             Starte jetzt
                         </Button>
@@ -38,7 +40,7 @@ useSeoMeta({
         <IndexCarouselSection class="mt-20" />
         <IndexFAQSection class="mt-20" />
         <div class="my-20 flex justify-center">
-            <NuxtLink to="/questionnaire">
+            <NuxtLink :to="localeRoute('/questionnaire')">
                 <Button size="xl" class="text-lg uppercase">
                     Starte jetzt
                 </Button>

@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { VisuallyHidden } from 'radix-vue';
 import { navigationMenuTriggerStyle } from '~/components/ui/navigation-menu';
+
+const localeRoute = useLocaleRoute();
 </script>
 
 <template>
@@ -8,17 +10,17 @@ import { navigationMenuTriggerStyle } from '~/components/ui/navigation-menu';
         class="sticky top-0 z-40 flex items-center justify-between bg-background py-5 md:px-3 lg:relative lg:top-auto"
     >
         <div class="w-3/4 ps-5 md:ps-10 lg:ps-20">
-            <NuxtLink to="/">
+            <NuxtLink :to="localeRoute('/')">
                 <NuxtImg src="/svg/logo.svg" alt="Logo" />
             </NuxtLink>
         </div>
 
         <div class="flex w-1/4 justify-end">
-            <div class="hidden pe-20 lg:inline-flex">
+            <div class="hidden pe-5 lg:inline-flex">
                 <NavigationMenu>
                     <NavigationMenuList>
                         <NavigationMenuItem class="flex gap-5">
-                            <NuxtLink to="/contact">
+                            <NuxtLink :to="localeRoute('/contact')">
                                 <NavigationMenuLink :class="navigationMenuTriggerStyle()">
                                     Kontakt
                                 </NavigationMenuLink>
@@ -28,9 +30,9 @@ import { navigationMenuTriggerStyle } from '~/components/ui/navigation-menu';
                 </NavigationMenu>
             </div>
 
-            <!-- <div class="hidden pe-5 lg:inline-flex">
+            <div class="hidden pe-20 lg:inline-flex">
                 <LocaleSwitcher />
-            </div> -->
+            </div>
 
             <div class="inline-flex pe-5 md:pe-10 lg:hidden">
                 <Sheet>
@@ -44,14 +46,14 @@ import { navigationMenuTriggerStyle } from '~/components/ui/navigation-menu';
                             </SheetTitle>
                         </SheetHeader>
                         <SheetDescription class="mt-5 grid justify-center gap-6">
-                            <NuxtLink to="/contact" class="text-center">
+                            <NuxtLink :to="localeRoute('/contact')" class="text-center">
                                 <SheetClose>
                                     <Button variant="ghost" size="lg">
                                         Kontakt
                                     </Button>
                                 </SheetClose>
                             </NuxtLink>
-                            <!-- <LocaleSwitcher /> -->
+                            <LocaleSwitcher show-local-name />
                         </SheetDescription>
                     </SheetContent>
                 </Sheet>
@@ -77,12 +79,12 @@ import { navigationMenuTriggerStyle } from '~/components/ui/navigation-menu';
             <div class="mt-4 items-center gap-16 lg:mt-0 lg:flex">
                 <div>
                     <p class="my-2 uppercase">
-                        <NuxtLink to="/imprint" class="hover:underline">
+                        <NuxtLink :to="localeRoute('/imprint')" class="hover:underline">
                             Impressum
                         </NuxtLink>
                     </p>
                     <p class="my-2 uppercase">
-                        <NuxtLink to="/privacy-policy" class="hover:underline">
+                        <NuxtLink :to="localeRoute('/privacy-policy')" class="hover:underline">
                             Datenschutz
                         </NuxtLink>
                     </p>

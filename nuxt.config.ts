@@ -41,12 +41,19 @@ export default defineNuxtConfig({
     },
 
     i18n: {
+        detectBrowserLanguage: {
+            useCookie: true,
+            cookieKey: 'i18n_redirected',
+            alwaysRedirect: true,
+            fallbackLocale: 'de',
+        },
         defaultLocale: 'de',
         // not used yet
         langDir: './locales',
         // lazy: true,
         locales: [
             {
+                iso: 'de-DE',
                 code: 'de',
                 flag: 'circle-flags:de',
                 name: 'Deutsch',
@@ -54,6 +61,7 @@ export default defineNuxtConfig({
                 isCatchallLocale: true,
             },
             {
+                iso: 'en-US',
                 code: 'en',
                 flag: 'circle-flags:us',
                 name: 'English',

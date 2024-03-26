@@ -1,8 +1,9 @@
-<script setup>
+<script setup lang="ts">
 import { Icon } from '#components';
 
-const { locale, locales } = useI18n();
-const switchLocalePath = useSwitchLocalePath();
+defineProps<{ showLocalName: boolean }>();
+
+const { locale, locales, setLocale } = useI18n();
 
 const availableLocales = computed(() => {
     return locales.value.filter(i => i.code !== locale.value);
@@ -25,16 +26,20 @@ const DynamicIcon = defineComponent({
 <template>
     <DropdownMenu>
         <DropdownMenuTrigger>
-            <Button variant="ghost" size="lg">
+            <div :class="showLocalName ? 'flex justify-center items-center gap-2' : ''">
                 <DynamicIcon :name="currentLocale.flag" />
-            </Button>
+                <span v-if="showLocalName">{{ currentLocale.name }}</span>
+            </div>
         </DropdownMenuTrigger>
         <DropdownMenuContent>
             <DropdownMenuItem v-for="item in availableLocales" :key="item.code">
-                <NuxtLink :to="switchLocalePath(item.code)" class="flex w-full items-center justify-center gap-3">
+                <a
+                    href="#" class="flex w-full items-center justify-center gap-3"
+                    @click.prevent.stop="setLocale(item.code)"
+                >
                     <DynamicIcon :name="item.flag" />
                     <span>{{ item.name }}</span>
-                </NuxtLink>
+                </a>
             </DropdownMenuItem>
         </DropdownMenuContent>
     </DropdownMenu>
