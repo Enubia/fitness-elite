@@ -37,7 +37,7 @@
         "zod": "3.22.4"
     },
     "devDependencies": {
-        "@antfu/eslint-config": "2.9.0",
+        "@antfu/eslint-config": "2.11.0",
         "@eslint/eslintrc": "3.0.2",
         "@nuxt/image": "1.4.0",
         "@nuxt/kit": "3.11.1",
@@ -54,7 +54,7 @@
         "nuxt-icon": "0.6.10",
         "nuxt-zod-i18n": "^1.4.0",
         "shadcn-nuxt": "0.10.2",
-        "simple-git-hooks": "2.11.0",
+        "simple-git-hooks": "2.11.1",
         "typescript": "5.4.3"
     },
     "simple-git-hooks": {

@@ -27,13 +27,5 @@
         "jsonc",
         "yaml",
         "toml"
-    ],
-
-    "search.exclude": {
-        "**/node_modules": true,
-        "**/dist": true,
-        "**/.nuxt": true,
-        "**/.output": true,
-        "**/.vscode": true
-    }
+    ]
 }
