@@ -6,6 +6,7 @@ const compat = new FlatCompat();
 export default antfu(
     {
         rules: {
+            curly: ['error', 'all'],
             'no-console': ['warn', { allow: ['warn', 'error', 'info'] }],
             'node/prefer-global/process': 'off',
             'style/brace-style': ['error', '1tbs'],
@@ -14,7 +15,7 @@ export default antfu(
             'style/linebreak-style': ['error', 'unix'],
             'style/quote-props': ['error', 'as-needed'],
             'style/quotes': ['error', 'single', { avoidEscape: true }],
-            curly: ['error', 'all'],
+            'vue/block-lang': ['error', { script: { lang: 'ts' } }],
         },
 
         stylistic: {

@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+<script setup lang="ts">
 useSeoMeta({
     title: 'Fitness Elite | Impressum',
     description: 'Impressum von Fitness Elite',

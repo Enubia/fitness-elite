@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+<script setup lang="ts">
 useSeoMeta({
     title: 'Fitness Elite | Your all in one coaching',
     description: 'Unleash your full potential with the all in one coaching "Elite Evolution"',
