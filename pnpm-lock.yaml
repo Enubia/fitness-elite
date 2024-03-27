@@ -27,10 +27,10 @@ dependencies:
     specifier: 8.0.0
     version: 8.0.0(vue@3.4.21)
   html-minifier-terser:
-    specifier: ^7.2.0
+    specifier: 7.2.0
     version: 7.2.0
   mjml:
-    specifier: ^4.15.3
+    specifier: 4.15.3
     version: 4.15.3
   nodemailer:
     specifier: 6.9.13
@@ -80,19 +80,19 @@ devDependencies:
     specifier: 3.2.0
     version: 3.2.0(rollup@4.13.0)
   '@nuxtjs/i18n':
-    specifier: ^8.2.0
+    specifier: 8.2.0
     version: 8.2.0(rollup@4.13.0)(vue@3.4.21)
   '@nuxtjs/tailwindcss':
     specifier: 6.11.4
     version: 6.11.4(rollup@4.13.0)
   '@types/html-minifier-terser':
-    specifier: ^7.0.2
+    specifier: 7.0.2
     version: 7.0.2
   '@types/mjml':
-    specifier: ^4.7.4
+    specifier: 4.7.4
     version: 4.7.4
   '@types/nodemailer':
-    specifier: ^6.4.14
+    specifier: 6.4.14
     version: 6.4.14
   '@vueuse/core':
     specifier: 10.9.0
@@ -110,7 +110,7 @@ devDependencies:
     specifier: 0.6.10
     version: 0.6.10(nuxt@3.11.1)(rollup@4.13.0)(vite@5.2.2)(vue@3.4.21)
   nuxt-zod-i18n:
-    specifier: ^1.4.0
+    specifier: 1.4.0
     version: 1.4.0(rollup@4.13.0)
   shadcn-nuxt:
     specifier: 0.10.2
